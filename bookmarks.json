@@ -1,0 +1,18 @@
+[{
+	"title": "Space Music Live",
+	"live": "yes",
+	"playlist": "no",
+	"url": "https://youtu.be/tNkZsRW7h2c"
+},
+{
+	"title": "Youtube Music Ambient Playlist",
+	"live": "no",
+	"playlist": "yes",
+	"url": "https://www.youtube.com/watch?v=3uDNrOTYulU&list=PLSSQs819Q5_RGiiltmS4uAHOu1M_fHGyH"
+},
+{
+	"title": "Tangerine Dream List",
+	"live": "no",
+	"platlist": "yes",
+	"url": "https://www.youtube.com/playlist?list=PLZx7z6LZtDpsa2HGfbCtWT8MoDni24LLP"
+}]
