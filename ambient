@@ -1,3 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/sh
-youtube-dl -f 91 -o - https://youtu.be/tNkZsRW7h2c | mpv -
-#youtube-dl -f 140 -o - "https://www.youtube.com/watch?v=3uDNrOTYulU&list=PLSSQs819Q5_RGiiltmS4uAHOu1M_fHGyH" | mpv -
