@@ -12,7 +12,7 @@ def termux_dialog_radio(title, choices):
     result = json.loads(execution_output)['text']
     return result
 
-def getClipboard():
+def get_clipboard():
     clip = sp.Popen("termux-clipboard-get", stdout=sp.PIPE)
     clipp = clip.communicate()[0].decode('utf-8')
     return clipp
@@ -61,10 +61,10 @@ def main():
     if cli_or_bm == "Clipboard":
         live_or_not = termux_dialog_radio("Is it live or not?", "Live, Not Live")
         if live_or_not == "Live":
-            url = getClipboard()
+            url = get_clipboard()
             youtube_stream_live(url)
         elif live_or_not == "Not Live":
-            url = getClipboard()
+            url = get_clipboard()
             youtube_stream_normal(url)
     elif cli_or_bm == "Bookmarks":
         bm = open(os.getenv("HOME") + '/.shortcuts/bookmarks.json', 'r')
