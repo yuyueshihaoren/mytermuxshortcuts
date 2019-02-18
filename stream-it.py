@@ -25,6 +25,7 @@ def youtube_stream_live(url):
 
 def youtube_stream_normal(url):
     youtubedl_command_str = "youtube-dl -f 140 -o - \"{0}\"".format(url)
+    #print(youtubedl_command_str)
     youtube_dl_obj = sp.Popen(shlex.split(youtubedl_command_str), stdout=sp.PIPE)
     sp.call(["mpv", "-"], stdin=youtube_dl_obj.stdout)
     youtube_dl_obj.stdout.close()
@@ -44,9 +45,10 @@ def choose_and_play_bookmarks(bmj):
     radio_command_obj = sp.Popen(shlex.split(radio_command_str), stdout=sp.PIPE)
     choice_json = radio_command_obj.communicate()[0]
     choice = json.loads(choice_json)['text']
-    print(choice)
+    #print(choice)
     for b in bmj:
         if b['title'] == choice:
+            #print("match")
             if b['live'] == 'yes':
                 youtube_stream_live(b['url'])
             elif b['live'] == 'no':
