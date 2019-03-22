@@ -1,0 +1,2 @@
+#!/bin/sh
+youtube-dl -o "/data/data/com.termux/files/home/storage/movies/%(title)s.%(ext)s" $(termux-clipboard-get)
