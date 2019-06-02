@@ -73,7 +73,7 @@ def choose_and_play_bookmarks(bmj):
                     youtube_stream_random(b['url'])
 
 
-def main():
+if __name__ == '__main__':
     cli_or_bm = termux_dialog_radio("From Clipboard or Bookmarks?", "Clipboard, Bookmarks")
     if cli_or_bm == "Clipboard":
         live_or_not = termux_dialog_radio("Is it live or not?", "Live, Not Live")
@@ -88,6 +88,3 @@ def main():
         bmj = json.load(bm)
         choose_and_play_bookmarks(bmj)
         bm.close()
-
-if __name__ == '__main__':
-    main()
